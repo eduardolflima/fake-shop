@@ -8,6 +8,7 @@ spec:
       app: postgres
   template:
     metadata:
+      name: postgres
       labels:
         app: postgres
     spec:
@@ -62,8 +63,6 @@ spec:
             value: Pg1234
           - name: DB_NAME
             value: ecommerce
-          - name: DB_PORT
-            value: "5432"
           - name: FLASK_APP
             value: index.py
 ---
