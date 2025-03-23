@@ -30,11 +30,10 @@ jobs:
     steps:
       - name: Obtendo codigo
         uses: actions/checkout@v4.2.2
-      - name: Configurando o kubeconfig
-        - uses: azure/k8s-set-context@v4
-          with:
-            method: kubeconfig
-            kubeconfig: ${{ secrets.K8S_KUBECONFIG }}
+      - uses: azure/k8s-set-context@v4
+        with:
+          method: kubeconfig
+          kubeconfig: ${{ secrets.K8S_KUBECONFIG }}
       - name: Deploy to Kubernetes cluster
       - uses: Azure/k8s-deploy@v5
         with:
