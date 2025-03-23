@@ -16,7 +16,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Construcao e envio da imagem Docker
-      - run: echo "Enviar a imagem Docker para o Hub Docker"
         uses: docker/build-push-action@v6
         with:
           context: ./src
