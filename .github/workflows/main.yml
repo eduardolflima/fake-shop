@@ -21,7 +21,7 @@ jobs:
           context: ./src
           file: ./src/Dockerfile
           push: true
-          tags: eduardolfl/fake-shop-desafio:v1
+          tags: eduardolfl/fake-shop-desafio:v{{ github.run_number }}
   CD:
     needs: [CI]
     runs-on: ubuntu-latest
