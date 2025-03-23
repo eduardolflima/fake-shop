@@ -30,6 +30,7 @@ jobs:
     steps:
       - name: Obtendo codigo
         uses: actions/checkout@v4.2.2
+      - name: Definindo contexto kubernetes
       - uses: azure/k8s-set-context@v4
         with:
           method: kubeconfig
